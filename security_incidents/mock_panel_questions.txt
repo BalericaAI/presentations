@@ -1,0 +1,10 @@
+Mock Panel Questions
+What Enterprise-Style Interviewers Will Ask
+Presentation-Driven Questions
+    “Which of these incidents is most common in your experience?”
+    “Where would you prioritize fixing this first?”
+    “What would you automate vs keep manual?”
+    “How would you explain this to an executive?”
+    “What tradeoffs do you see?”
+
+    
