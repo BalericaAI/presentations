@@ -59,6 +59,7 @@ Say:
 
 
 Slide 7 — Kubernetes Example: OPA in the Wrong Namespace
+
 Bullets:
     OPA installed
     Policy correct
@@ -69,6 +70,7 @@ Key line:
   “Security was real — just not where it mattered.”
 
 Slide 8 — Kubernetes Example: Audit-Only OPA
+
 Bullets:
     Audit mode
     Logs generated
