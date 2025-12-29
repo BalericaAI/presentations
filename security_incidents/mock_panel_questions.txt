@@ -7,4 +7,71 @@ Presentation-Driven Questions
     “How would you explain this to an executive?”
     “What tradeoffs do you see?”
 
-    
+Technical Follow-Ups (AWS / Kubernetes)
+    “How would you prevent IAM permission creep?”
+    “How do you verify OPA enforcement before deployment?”
+    “What’s the difference between guardrails and detection?”
+    “How would you scope access in a multi-account AWS setup?”
+    “What’s your approach to least privilege in Kubernetes?”
+
+Consulting / Customer Questions
+    “What if the customer disagrees?”
+    “What if security slows the team down?”
+    “Who owns rollback?”
+    “How do you balance speed and safety?”
+    “How do you handle incomplete information?”
+
+
+Hostile / Stress-Test Follow-Ups
+How to Stay Calm When the Room Pushes Back
+
+Note to Students:
+These are deliberately uncomfortable.
+The goal is composure, not perfection.
+
+Hostile Question 1
+    “Isn’t this just a process failure?”
+
+Good answer:
+    “Process is part of it, but systems that rely on perfect process usually fail. I focus on controls that reduce the cost of human error.”
+
+Hostile Question 2
+    “Why didn’t they just test it?”
+
+Good answer:
+    “They tested the happy path. What was missing was a test that verified enforcement across all scopes.”
+
+Hostile Question 3
+    “Sounds like they shouldn’t have had access.”
+
+Good answer:
+    “Access was necessary for the task. The issue was not bounding it tightly enough or verifying removal.”
+
+Hostile Question 4
+    “Isn’t OPA supposed to prevent this?”
+
+Good answer:
+    “OPA prevents what it’s enforcing. The failure was assuming enforcement without verifying scope and mode.”
+
+Hostile Question 5
+    “What would you have done differently?”
+
+Best structure:
+    Clarify assumptions
+    State constraint
+    Propose one concrete change
+
+Example:
+    “Given the time pressure, I’d add a pre-deploy check that fails if policies aren’t enforced cluster-wide.”
+
+Hostile Question 6
+    “How do you avoid slowing teams down?”
+
+Strong answer:
+    “By shifting friction earlier. Slow deployments are cheaper than fast incidents.”
+
+Remember this when you feel attacked
+    “Panels aren’t testing whether you’re right.
+    They’re testing whether you stay thoughtful when challenged.”
+
+
