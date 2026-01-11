@@ -1,0 +1,24 @@
+Manage and support a large pool of rotating AWS accounts, including provisioning, leasing, access controls, automation workflows, and account lifecycle management.--->  you need to use TF for this.
+
+Maintain and enhance the automation systems responsible for opening, monitoring, and cleaning accounts after lease expiration.
+Develop Terraform modules, infrastructure code, and reusable templates that product teams can leverage when deploying into these innovation environments.
+Integrate private AWS accounts (behind firewalls) with Cloudflare or similar technologies to support external-facing demo or customer environments.
+Build and maintain CI/CD pipelines—primarily GitHub Actions—to support secure deployments and account configuration workflows.
+Collaborate directly with product, engineering, and data science teams to understand their demo and experimentation needs.
+Implement and maintain IAM solutions, including SAML/IDC integrations and identity governance for multi-account access.
+Contribute to day-to-day operations of the innovation accounts, including automation improvements, troubleshooting, and building developer‑friendly tooling.
+Participate in daily standups, sprint ceremonies, and agile workflows alongside an engaged engineering and data science organization.
+Work closely with a senior engineer who developed the platform to expand, optimize, and scale the system.
+ 
+
+Required Skills:
+
+5+ years of hands-on AWS engineering experience, supporting multiple AWS accounts (not a single-product sysadmin background).
+Strong proficiency in AWS IAM, including SAML, identity federation, and enterprise access patterns.
+Experience managing infrastructure-as-code via Terraform.
+Expertise with CI/CD pipelines, especially GitHub Actions, and understanding of how deployment workflows apply to multi-account AWS environments.
+Ability to integrate secure AWS workloads with external services (e.g., Cloudflare) and build safe connectivity patterns.
+Comfortable working with private, internal-only AWS environments behind firewalls.
+Strong communication skills and willingness to work directly with internal customers (primarily data science teams and product engineering groups).
+Familiar with agile processes: daily standups, sprint cycles, Slack collaboration, and cross-team support.
+Not a heads-down coder—must be collaborative, customer-focused, and able to explain technical decisions clearly.
