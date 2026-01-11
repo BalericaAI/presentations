@@ -59,9 +59,31 @@ If you want a clean demo moment:
       --query "length(Users[?PasswordLastUsed!=null && PasswordLastUsed<=\`$(date -u -d '30 days ago' +%Y-%m-%dT%H:%M:%SZ)\`])" \
       --output text
 
+Inactive Account Detection (Last Login > 30 Days)
+What the student did (technical):
+    Queried IAM user PasswordLastUsed timestamps
+    Identified dormant console users exceeding inactivity threshold
+    Generated counts and tabular reports
+Resume bullet (polished):
 
+    • Identified dormant IAM console accounts by analyzing authentication timestamps to 
+      support least-privilege enforcement and access reviews.
 
+Combined “Architect-Level” Resume Bullet
+This is gold for Cloud IAM / Security Architect roles:
 
+    • Automated IAM access hygiene checks aligned to NIST and CIS controls by identifying 
+      expired credentials and dormant accounts using AWS CLI, supporting least-privilege 
+      enforcement and audit readiness.
+
+Optional: “Lab / Project” Section Template
+You can reuse this verbatim:
+
+    IAM Compliance Automation Lab (AWS)
+      • Implemented CLI-based IAM access hygiene checks aligned to NIST SP 800-53 and CIS 
+        Critical Security Controls.
+      • Identified expired credentials and dormant accounts using authentication metadata.
+      • Produced audit-ready metrics suitable for security reviews and SIEM ingestion.
 
 
 Develop Terraform modules, infrastructure code, and reusable templates that product teams can leverage when deploying into these innovation environments.
