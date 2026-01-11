@@ -2,6 +2,68 @@ Manage and support a large pool of rotating AWS accounts, including provisioning
   Sample: https://github.com/BalericaAI/presentations/blob/main/terraform/aws_iam.tf
 
 Maintain and enhance the automation systems responsible for opening, monitoring, and cleaning accounts after lease expiration.
+
+Step 1 — Get the account password policy
+
+    aws iam get-account-password-policy \
+      --query 'PasswordPolicy.MaxPasswordAge' \
+      --output text
+
+Step 2 — Count users whose passwords are expired
+
+    aws iam list-users \
+      --query "Users[?PasswordLastUsed!=null && PasswordLastUsed<=\`$(date -u -d '90 days ago' +%Y-%m-%dT%H:%M:%SZ)\`].UserName" \
+      --output text | wc -w
+
+What this does
+    Filters only users with console passwords
+    Compares PasswordLastUsed against the expiration window
+    Outputs a count, not a list (good for reporting)
+
+2) IAM users whose last login was more than 30 days ago
+
+    aws iam list-users \
+      --query "Users[?PasswordLastUsed!=null && PasswordLastUsed<=\`$(date -u -d '30 days ago' +%Y-%m-%dT%H:%M:%SZ)\`].[UserName,PasswordLastUsed]" \
+      --output table
+
+
+Example output
+
+-----------------------------------------
+|              ListUsers                |
++----------------+----------------------+
+|  UserName      |  PasswordLastUsed    |
++----------------+----------------------+
+|  legacy.user   |  2023-11-02T14:18Z   |
+|  contractor01  |  2023-10-15T09:41Z   |
++----------------+----------------------+
+
+
+If you want just the count
+
+    aws iam list-users \
+      --query "length(Users[?PasswordLastUsed!=null && PasswordLastUsed<=\`$(date -u -d '30 days ago' +%Y-%m-%dT%H:%M:%SZ)\`])" \
+      --output text
+
+
+Optional: One-line combined audit snapshot
+
+If you want a clean demo moment:
+
+    echo "Expired passwords:" && \
+    aws iam list-users \
+      --query "length(Users[?PasswordLastUsed!=null && PasswordLastUsed<=\`$(date -u -d '90 days ago' +%Y-%m-%dT%H:%M:%SZ)\`])" \
+      --output text && \
+    echo "Inactive >30 days:" && \
+    aws iam list-users \
+      --query "length(Users[?PasswordLastUsed!=null && PasswordLastUsed<=\`$(date -u -d '30 days ago' +%Y-%m-%dT%H:%M:%SZ)\`])" \
+      --output text
+
+
+
+
+
+
 Develop Terraform modules, infrastructure code, and reusable templates that product teams can leverage when deploying into these innovation environments.
 Integrate private AWS accounts (behind firewalls) with Cloudflare or similar technologies to support external-facing demo or customer environments.
 Build and maintain CI/CD pipelines—primarily GitHub Actions—to support secure deployments and account configuration workflows.
