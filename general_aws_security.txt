@@ -1,4 +1,5 @@
 Manage and support a large pool of rotating AWS accounts, including provisioning, leasing, access controls, automation workflows, and account lifecycle management.--->  you need to use TF for this.
+  Sample: https://github.com/BalericaAI/presentations/blob/main/terraform/aws_iam.tf
 
 Maintain and enhance the automation systems responsible for opening, monitoring, and cleaning accounts after lease expiration.
 Develop Terraform modules, infrastructure code, and reusable templates that product teams can leverage when deploying into these innovation environments.
