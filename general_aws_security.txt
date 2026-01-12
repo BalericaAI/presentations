@@ -270,18 +270,19 @@ What Not to Say ❌
     Those are vague and weak.
 
 
-Participate in daily standups, sprint ceremonies, and agile workflows alongside an engaged engineering and data science organization.
-Work closely with a senior engineer who developed the platform to expand, optimize, and scale the system.
+Participate in daily standups, sprint ceremonies, and agile workflows alongside an engaged engineering and data science organization.---> Easy
+
+Work closely with a senior engineer who developed the platform to expand, optimize, and scale the system.---> Easy
  
 
 Required Skills:
 
-5+ years of hands-on AWS engineering experience, supporting multiple AWS accounts (not a single-product sysadmin background).
-Strong proficiency in AWS IAM, including SAML, identity federation, and enterprise access patterns.
-Experience managing infrastructure-as-code via Terraform.
-Expertise with CI/CD pipelines, especially GitHub Actions, and understanding of how deployment workflows apply to multi-account AWS environments.
-Ability to integrate secure AWS workloads with external services (e.g., Cloudflare) and build safe connectivity patterns.
-Comfortable working with private, internal-only AWS environments behind firewalls.
-Strong communication skills and willingness to work directly with internal customers (primarily data science teams and product engineering groups).
-Familiar with agile processes: daily standups, sprint cycles, Slack collaboration, and cross-team support.
-Not a heads-down coder—must be collaborative, customer-focused, and able to explain technical decisions clearly.
+5+ years of hands-on AWS engineering experience, supporting multiple AWS accounts (not a single-product sysadmin background).---> This is AWS Organizations
+Strong proficiency in AWS IAM, including SAML, identity federation, and enterprise access patterns.---> You need Azure Active Directory Integration
+Experience managing infrastructure-as-code via Terraform.---> You know this.
+Expertise with CI/CD pipelines, especially GitHub Actions, and understanding of how deployment workflows apply to multi-account AWS environments.---> You can easlly do this
+Ability to integrate secure AWS workloads with external services (e.g., Cloudflare) and build safe connectivity patterns.----> Not hard.
+Comfortable working with private, internal-only AWS environments behind firewalls.---> WE did this in class
+Strong communication skills and willingness to work directly with internal customers (primarily data science teams and product engineering groups).---> EAsy, smile
+Familiar with agile processes: daily standups, sprint cycles, Slack collaboration, and cross-team support.---> EAsy
+Not a heads-down coder—must be collaborative, customer-focused, and able to explain technical decisions clearly.---> EAsy
